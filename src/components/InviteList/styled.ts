@@ -60,11 +60,10 @@ export const SendBtn = styled.a`
   background: linear-gradient(to right, #5545d6, #7f228c, #908df5, #e43d3c);
   position: fixed;
   box-shadow: 0 4px 15px 0 rgba(136, 92, 197, 0.2);
-  position: fixed;
-  bottom: 20%;
-  left: 50%;
+  position: sticky;
+  bottom: 0;
+  align-self: center;
   transition: 0.3s;
-  transform: translate(-50%, 0);
   cursor: pointer;
 
   &:hover {
