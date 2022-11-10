@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   box-sizing: border-box;
   width: 95vw;
-  height: 95vh;
+  height: 80vh;
   border: 1px solid gray;
   border-radius: 30px;
   background-color: #c4dfe6;
@@ -60,7 +60,8 @@ export const SendBtn = styled.a`
   background: linear-gradient(to right, #5545d6, #7f228c, #908df5, #e43d3c);
   position: fixed;
   box-shadow: 0 4px 15px 0 rgba(136, 92, 197, 0.2);
-  bottom: 50px;
+  position: fixed;
+  bottom: 20%;
   left: 50%;
   transition: 0.3s;
   transform: translate(-50%, 0);
