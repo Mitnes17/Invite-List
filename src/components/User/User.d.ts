@@ -1,6 +1,6 @@
 export type UserType = {
   email: string;
-  id: string;
+  id: number;
   first_name: string;
   last_name: string;
   avatar: string;
@@ -8,5 +8,6 @@ export type UserType = {
 
 export type Props = {
   user: UserType;
-  key: React.Key;
+  onClick: any;
+  invitedUser: boolean;
 };

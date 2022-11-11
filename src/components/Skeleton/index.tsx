@@ -1,12 +1,11 @@
-import React from 'react';
 import ContentLoader from 'react-content-loader';
 
 export const Skeleton = (props: any) => (
   <ContentLoader
     speed={2}
-    width={320}
+    width={340}
     height={150}
-    viewBox='0 0 320 150'
+    viewBox='0 0 340 150'
     backgroundColor='#e2dfdf'
     foregroundColor='#f4f0f0'
     {...props}
@@ -20,7 +19,7 @@ export const Skeleton = (props: any) => (
       height='25'
     />
     <rect
-      x='280'
+      x='300'
       y='36'
       rx='62'
       ry='62'

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const User = styled.li`
-  list-style-type: none;
   display: flex;
   max-width: 100%;
   column-gap: 10px;
+  list-style-type: none;
+
   img {
-    border-radius: 50%;
     width: 100px;
     height: auto;
+    border-radius: 50%;
   }
 `;
 
@@ -19,46 +20,44 @@ export const NameEmail = styled.div`
 `;
 
 export const AddBtn = styled.a`
+  position: relative;
+  align-self: center;
   width: 30px;
   height: 30px;
-  align-self: center;
-  background: #66a5ad;
   border-radius: 50%;
-  position: relative;
+  background: #66a5ad;
   cursor: pointer;
 
   &::after,
   &::before {
     content: '';
     display: block;
+    top: calc(50% - 1px);
     width: 16px;
     height: 2px;
     background: #c4dfe6;
     border-radius: 1.25px;
     position: absolute;
     transition: 0.3s;
-    top: calc(50% - 1px);
   }
 
   &::after {
-    transition: 0.3s ease-in-out;
     left: calc(50% - 8px);
+    transition: 0.3s ease-in-out;
     transform: rotate(90deg);
   }
 
   &::before {
-    transition: 0.3s ease-in-out;
     left: calc(50% - 8px);
+    transition: 0.3s ease-in-out;
   }
 
-  &.active {
+  &.isInvited {
     &::after {
       transform: rotate(180deg);
     }
   }
 `;
-
-export const FullName = styled.h3``;
 
 export const Email = styled.h4`
   font-style: normal;

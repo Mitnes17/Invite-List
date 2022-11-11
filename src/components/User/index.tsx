@@ -1,8 +1,13 @@
 import { FC } from 'react';
 import { Props } from './User';
+
 import * as S from './styled';
 
-export const User: FC<Props> = ({ user: { email, first_name, last_name, avatar } }) => {
+export const User: FC<Props> = ({
+  user: { email, first_name, last_name, avatar, id },
+  onClick,
+  invitedUser,
+}) => {
   const fullName = first_name + ' ' + last_name;
 
   return (
@@ -13,10 +18,13 @@ export const User: FC<Props> = ({ user: { email, first_name, last_name, avatar }
       ></img>
       <S.Wrap>
         <S.NameEmail>
-          <S.FullName>{fullName}</S.FullName>
+          <h3>{fullName}</h3>
           <S.Email>{email}</S.Email>
         </S.NameEmail>
-        <S.AddBtn></S.AddBtn>
+        <S.AddBtn
+          onClick={() => onClick(id)}
+          className={invitedUser ? 'isInvited' : ''}
+        ></S.AddBtn>
       </S.Wrap>
     </S.User>
   );
