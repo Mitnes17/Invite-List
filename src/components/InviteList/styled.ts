@@ -10,7 +10,7 @@ export const Container = styled.div`
   row-gap: 50px;
   padding: 50px 30px 30px 30px;
   border-radius: 30px;
-  overflow-y: auto;
+  overflow-y: overlay;
   border: 1px solid gray;
   background-color: #c4dfe6;
 
