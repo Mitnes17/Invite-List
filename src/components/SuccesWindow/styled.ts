@@ -20,6 +20,10 @@ export const Container = styled.div`
   align-items: center;
   animation: success 1s;
 
+  @media (min-width: 768px) {
+    padding-bottom: 30px;
+  }
+
   img {
     width: 180px;
     height: 180px;

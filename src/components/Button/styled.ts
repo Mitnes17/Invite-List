@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 export const Button = styled.a<Props>`
   position: ${({ position }) => (position ? position : 'fixed')};
+  top: 73%;
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: ${({ bot }) => (bot ? bot : '230px')};
   text-align: center;
   width: 266px;
   padding: 10px 15px;

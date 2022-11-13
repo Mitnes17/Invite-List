@@ -15,7 +15,6 @@ export const SuccesWindow: FC<Props> = ({ count, isSuccess }) => {
       <S.P>You sent invitation to {count} users!</S.P>
       <Button
         position='sticky'
-        bot='15px'
         text='Home'
         onClick={() => window.location.reload()}
       />
