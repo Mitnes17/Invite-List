@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import { User } from '../User';
 import { UserType } from '../User/User';
 import { Skeleton } from '../Skeleton';
@@ -9,24 +9,25 @@ import * as S from './styled';
 
 export const InviteList = () => {
   //fetch request for users
-  const [url, setUrl] = useState('https://reqres.in/api/users');
+  const urls = ['https://reqres.in/api/users', 'https://reqres.in/api/users?page=2'];
 
   const [isLoading, setIsLoading] = useState(true);
 
-  const [users, setUsers] = useState([]);
-
-  const fetchData = useCallback(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => setUsers(json.data))
-      .catch((error) => console.log(error))
-      .finally(() => setTimeout(() => setIsLoading(false), 1000));
-  }, [url]);
+  const [users, setUsers] = useState<any[]>([]);
 
   useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-  //
+    const abortController = new AbortController();
+
+    const fetchData = (url: string) => {
+      fetch(url)
+        .then((response) => response.json())
+        .then((json) => setUsers((prev) => prev.concat(json.data)))
+        .catch((error) => console.log(error))
+        .finally(() => setTimeout(() => setIsLoading(false), 1000));
+    };
+    urls.forEach((url) => fetchData(url));
+    return () => abortController.abort();
+  }, []);
 
   const [searchValue, setSearchValue] = useState('');
 
@@ -66,12 +67,18 @@ export const InviteList = () => {
             ></S.Input>
           </S.SearchBar>
           {isLoading ? (
-            <div>
-              <Skeleton count={4} />
-              <Skeleton count={4} />
-              <Skeleton count={4} />
-              <Skeleton count={4} />
-            </div>
+            <S.SkeletWrap>
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+            </S.SkeletWrap>
           ) : (
             <S.UserList>
               {users

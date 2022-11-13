@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const H3 = styled.h3`
-  font-size: 40px;
+  font-size: 60px;
+  color: teal;
 `;
 
 export const P = styled.p`
@@ -14,12 +15,14 @@ export const Container = styled.div`
   background-color: #c4dfe6;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-top: 50px;
   align-items: center;
-  animation: success 1s cubic-bezier(0.25, 0.75, 0.5, 1.25);
+  animation: success 1s;
+
   img {
-    width: 50%;
-    height: auto;
+    width: 180px;
+    height: 180px;
   }
 
   @keyframes success {

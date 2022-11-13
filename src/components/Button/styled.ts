@@ -1,12 +1,14 @@
+import { Props } from './Button.d';
 import styled from 'styled-components';
 
-export const Button = styled.a`
-  position: fixed;
+export const Button = styled.a<Props>`
+  position: ${({ position }) => (position ? position : 'fixed')};
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: ${({ bot }) => (bot ? bot : '230px')};
   text-align: center;
-  position: sticky;
-  align-self: center;
-  bottom: 0;
-  width: 70%;
+  width: 266px;
   padding: 10px 15px;
   border-radius: 15px;
   font-size: 30px;

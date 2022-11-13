@@ -8,8 +8,13 @@ export const User = styled.li`
 
   img {
     width: 100px;
-    height: auto;
+    height: 100px;
     border-radius: 50%;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    flex: 1;
   }
 `;
 

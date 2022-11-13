@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   position: relative;
   box-sizing: border-box;
-  width: 95vw;
+  width: 360px;
   height: 80vh;
   row-gap: 50px;
   padding: 50px 30px 30px 30px;
@@ -13,6 +13,10 @@ export const Container = styled.div`
   overflow-y: auto;
   border: 1px solid gray;
   background-color: #c4dfe6;
+
+  @media (min-width: 768px) {
+    width: 740px;
+  }
 `;
 
 export const UserList = styled.ul`
@@ -21,6 +25,14 @@ export const UserList = styled.ul`
   align-content: space-around;
   justify-content: space-between;
   row-gap: 30px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-items: stretch;
+    column-gap: 50px;
+  }
 `;
 
 export const SearchBar = styled.div`
@@ -55,4 +67,11 @@ export const Input = styled.input`
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const SkeletWrap = styled.div`
+  display: flex;
+  flex: 1 40%;
+  flex-wrap: wrap;
+  column-gap: 50px;
 `;
