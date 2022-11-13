@@ -10,19 +10,14 @@ export const P = styled.p`
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #c4dfe6;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 50px;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #c4dfe6;
   animation: success 1s;
-
-  @media (min-width: 768px) {
-    padding-bottom: 30px;
-  }
 
   img {
     width: 180px;

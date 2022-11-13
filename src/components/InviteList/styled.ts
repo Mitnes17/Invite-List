@@ -6,7 +6,7 @@ export const Container = styled.div`
   position: relative;
   box-sizing: border-box;
   width: 360px;
-  height: 80vh;
+  height: 550px;
   row-gap: 50px;
   padding: 50px 30px 30px 30px;
   border-radius: 30px;
@@ -16,6 +16,7 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     width: 740px;
+    height: 550px;
   }
 `;
 

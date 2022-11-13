@@ -3,9 +3,10 @@ import styled from 'styled-components';
 
 export const Button = styled.a<Props>`
   position: ${({ position }) => (position ? position : 'fixed')};
-  top: 73%;
-  left: 0;
+  top: 550px;
   right: 0;
+  left: 0;
+  transform: translateY(${({ transform }) => (transform ? transform : '-100%')});
   margin: 0 auto;
   text-align: center;
   width: 266px;
