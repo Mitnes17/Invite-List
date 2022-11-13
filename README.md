@@ -1,3 +1,23 @@
+# Invite List
+
+A small app with function of sending an invitation.
+
+Users' data obtained by request. 
+
+You can search users by name or email. You can select users and add them to invite list.
+
+Responsive design (desktop and mobile versions).
+
+Technology stack:
+
+-React
+
+-Styled Components
+
+-TypeScript
+
+You can see it on vercel: https://invite-list-five.vercel.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
