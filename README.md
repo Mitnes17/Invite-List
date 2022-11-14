@@ -2,7 +2,7 @@
 
 A small app with function of sending an invitation.
 
-Users' data obtained by request. 
+Users' data was obtained using a fetch API request. 
 
 You can search users by name or email. You can select users and add them to invite list.
 
